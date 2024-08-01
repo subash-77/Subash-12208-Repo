@@ -33,9 +33,9 @@ class JewelleryServiceImplTest {
 	@Test
 	void testGetJewellery() {
 	    
-	    Jewellery jewellery = jewelleryService.getJewellery(7);
+	    Jewellery jewellery = jewelleryService.getJewellery(13);
 	    assertNotNull(jewellery);
-	    assertEquals(7, jewellery.getId()); 
+	    assertEquals(13, jewellery.getId()); 
 	}
 
 
@@ -50,7 +50,7 @@ class JewelleryServiceImplTest {
 	@Test
 	void testUpdateJewellery() {
 	    
-	    Jewellery existingJewellery = jewelleryService.getJewellery(7);
+	    Jewellery existingJewellery = jewelleryService.getJewellery(13);
 	    assertNotNull(existingJewellery);
 
 	   
@@ -63,7 +63,7 @@ class JewelleryServiceImplTest {
 	    jewelleryService.updateJewellery(existingJewellery);
 
 	  
-	    Jewellery updatedJewellery = jewelleryService.getJewellery(7);
+	    Jewellery updatedJewellery = jewelleryService.getJewellery(13);
 	    assertEquals("Updated Ring", updatedJewellery.getName());
 	    assertEquals("Updated description", updatedJewellery.getDescription());
 	    assertEquals(12000, updatedJewellery.getPrice());
