@@ -40,9 +40,9 @@ class SalesServiceImplTest {
 
 	@Test
 	void testGetSales() {
-		Sales sales = salesService.getSales(35);
+		Sales sales = salesService.getSales(41);
 		assertNotNull(sales);
-		assertEquals(35, sales.getSaleId());
+		assertEquals(41, sales.getSaleId());
 	}
 
 	@Test
@@ -54,7 +54,7 @@ class SalesServiceImplTest {
 
 	@Test
 	void testUpdateSales() {
-		Sales existingSales = salesService.getSales(35);
+		Sales existingSales = salesService.getSales(41);
 		assertNotNull(existingSales);
 
 		existingSales.setSaleDate("13-12-2023");
@@ -62,7 +62,7 @@ class SalesServiceImplTest {
 
 		salesService.updateSales(existingSales);
 
-		Sales updatedSales = salesService.getSales(35);
+		Sales updatedSales = salesService.getSales(41);
 		assertNotNull(updatedSales);
 		assertEquals("13-12-2023", updatedSales.getSaleDate());
 		assertEquals(5, updatedSales.getQuantitySold());
